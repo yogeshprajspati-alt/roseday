@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RoseDay Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ['"Fira Code"', 'monospace'],
+              sans: ['"Inter"', 'sans-serif'],
+              script: ['"Dancing Script"', 'cursive'],
+              hand: ['"Patrick Hand"', 'cursive'],
+            },
+            colors: {
+              lab: {
+                bg: '#f0fdfa', // Teal 50
+                card: '#ffffff',
+                border: '#ccfbf1', // Teal 100
+                text: '#334155', // Slate 700
+                accent: '#0d9488', // Teal 600
+                pink: '#fce7f3', // Pink 100
+                rose: '#e11d48', // Rose 600
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #root {
+        height: 100%;
+        width: 100%;
+      }
+      
+      .microscope-mask {
+        mask-image: radial-gradient(circle, black 60%, transparent 100%);
+        -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
+      }
+
+      /* ECG Animation */
+      @keyframes ecg-flow {
+        0% { stroke-dashoffset: 1000; }
+        100% { stroke-dashoffset: 0; }
+      }
+      
+      .animate-ecg {
+        stroke-dasharray: 1000;
+        animation: ecg-flow 3s linear infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0?dev",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime?dev",
+    "react-dom": "https://esm.sh/react-dom@18.2.0?dev",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client?dev",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?dev&deps=react@18.2.0",
+    "framer-motion": "https://esm.sh/framer-motion@10.18.0?dev&deps=react@18.2.0,react-dom@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
