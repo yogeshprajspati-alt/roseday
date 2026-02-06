@@ -310,7 +310,7 @@ const App: React.FC = () => {
   return (
     <div className="relative h-[100dvh] w-full bg-lab-bg overflow-hidden font-sans text-lab-text">
       {/* Background Audio */}
-      <audio ref={audioRef} loop src="background.mp3" />
+      <audio ref={audioRef} loop src="./background.mp3" />
       
       {/* Music Toggle */}
       <button 
